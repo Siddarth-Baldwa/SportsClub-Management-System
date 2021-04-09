@@ -1,4 +1,5 @@
 <?php include('Homepageconstants.php') ?>
+
 <form class="relative px-5 mt-4 bg-gray-100">
     <svg width="20" height="20" fill="currentColor" class="absolute left-8 top-1/2 transform -translate-y-1/2 text-gray-400 px">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />
@@ -42,7 +43,14 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200" id="table-data">
                         <?php
-                        $sql = "SELECT * FROM `event`";
+
+                        if (empty($_GET)) {
+                            $sql = "SELECT * FROM `event`";
+                        } else {
+
+                            $sql = "SELECT * FROM `event` WHERE event_name LIKE '%" . $_GET['search_event'] . "%'";
+                        }
+
                         $result = mysqli_query($conn, $sql);
                         if ($result == TRUE) {
                             $num = mysqli_num_rows($result);
@@ -83,24 +91,17 @@
         </div>
     </div>
 </div>
-<!-- 
-<script type="text/javascript">
-    $(document).ready(function() {
 
-        $('#search_event').keyup(function() {
-            var search_event = $(this).val();
-            $.ajax({
-                url: "fetch.php",
-                method: "POST",
-                data: {
-                    search: search_event
-                },
-                success: function(data) {
-                    $('#table-data').html(data);
-                }
-            });
-        });
-    });
-</script> -->
+<script type="text/javascript">
+    function myFunction() {
+
+
+        var search_key = '<?php echo $_GET['search_event']; ?>';
+
+        $('#table-data').load("Fetch.php", {
+            slot: search_key
+        })
+    }
+</script>
 
 <?php include('DropdownJS_Script.php') ?>

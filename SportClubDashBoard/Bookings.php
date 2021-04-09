@@ -1,9 +1,10 @@
 <?php include('Homepageconstants.php') ?>
+
 <form class="relative px-5 mt-4 bg-gray-100">
     <svg width="20" height="20" fill="currentColor" class="absolute left-8 top-1/2 transform -translate-y-1/2 text-gray-400 px">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />
     </svg>
-    <input class="focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-10" type="text" aria-label="Search" placeholder="SEARCH" />
+    <input class="focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-10" type="text" aria-label="Search" placeholder="SEARCH" name="search_bookings" id="search_bookings" />
 </form>
 <div class="flex flex-col">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -32,6 +33,14 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                         <?php
+
+
+                        if (empty($_GET)) {
+                            $sql = "SELECT * FROM `casual_play` INNER JOIN `player` ON casual_play.reg_id = player.reg_id ORDER BY casual_play.date ,casual_play.start_time";
+                        } else {
+                            $sql = "SELECT * FROM `casual_play`  INNER JOIN `player` ON casual_play.reg_id = player.reg_id WHERE first_name LIKE '%" . $_GET['search_bookings'] . "%' ORDER BY casual_play.date ,casual_play.start_time ";
+                        }
+
                         $sql = "SELECT * FROM `casual_play` INNER JOIN `player` ON casual_play.reg_id = player.reg_id ORDER BY casual_play.date ,casual_play.start_time";
                         $result = mysqli_query($conn, $sql);
                         if ($result == TRUE) {

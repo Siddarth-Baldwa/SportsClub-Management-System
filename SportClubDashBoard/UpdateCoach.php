@@ -8,8 +8,7 @@ $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
 ?>
 
-
-<div class="relative mt-24 w-auto my-6 mx-auto max-w-3xl">
+<div class="relative mt-4 w-auto my-6 mx-auto max-w-3xl">
     <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
 
         <div class="mt-10 sm:mt-0">

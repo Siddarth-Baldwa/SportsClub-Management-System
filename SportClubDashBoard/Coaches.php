@@ -3,7 +3,7 @@
     <svg width="20" height="20" fill="currentColor" class="absolute left-8 top-1/2 transform -translate-y-1/2 text-gray-400 px">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />
     </svg>
-    <input class="focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-10" type="text" aria-label="Search" placeholder="SEARCH" />
+    <input class="focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-10" type="text" aria-label="Search" placeholder="SEARCH" name="search_coach" id="search_coach" />
 </form>
 <div class="flex flex-col">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -42,7 +42,14 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                         <?php
-                        $sql = "SELECT * FROM `coach`";
+
+                        if (empty($_GET)) {
+                            $sql = "SELECT * FROM `coach`";
+                        } else {
+
+                            $sql = "SELECT * FROM `coach` WHERE first_name LIKE '%" . $_GET['search_coach'] . "%'";
+                        }
+
                         $result = mysqli_query($conn, $sql);
                         if ($result == TRUE) {
                             $num = mysqli_num_rows($result);
