@@ -16,9 +16,9 @@
 
 </head>
 
-<body class="bg-gray-100">
+<body class="absolute top-0 w-screen h-full bg-gray-900" style="background-image: url(../images/1116882.jpg); background-size: 100%; background-repeat: no-repeat; overflow-x: hidden;">
     <div>
-        <nav class="bg-gray-800">
+        <nav class="bg-gray-800 bg-opacity-0">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">

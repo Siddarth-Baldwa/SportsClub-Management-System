@@ -1,4 +1,3 @@
-<?php include('config/constants.php') ?>
 <!DOCTYPE html>
 <html>
 
@@ -26,7 +25,7 @@
                 <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
                     <li class="flex items-center">
                         <a href="register.php">
-                            <button class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3" type="button" style="transition: all 0.15s ease 0s;">
+                            <button class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3" type="button" name="register" style="transition: all 0.15s ease 0s;">
                                 <i class="fas fa-arrow-alt-circle-down"></i> REGISTER
                             </button>
                         </a>
@@ -65,7 +64,7 @@
                                         <input type="text" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Password" id="password" name="password" style="transition: all 0.15s ease 0s;" />
                                     </div>
                                     <div class="text-center mt-6">
-                                        <button class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full" type="submit" id="btn" name="submit" style="transition: all 0.15s ease 0s;">
+                                        <button type="submit" class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full" id="btn" name="submit1" style="transition: all 0.15s ease 0s;">
                                             Sign In
                                         </button>
                                     </div>
@@ -86,29 +85,45 @@
 </body>
 
 </html>
-<?php
 
-if (isset($_POST['submit'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "sportsclub";
+//Create a connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+// Die if connection was not successful
+if (!$conn) {
+    die("Sorry we failed to connect: " . mysqli_connect_error());
+}
+
+
+if (isset($_POST['submit1'])) {
+    // echo ('<script>window.alert("Please enter Password");</script>');
+
+    echo $email = $_POST['email'];
+    echo $password2 = $_POST['password'];
+
+    // echo ('<script>window.alert("baba");</script>');
+    // echo ('<script>window.alert("$password2");</script>');
 
     // $sql = "Select * from users where username='$username' AND password='$password'";
     $sql = "SELECT * FROM player where email='$email'";
-    $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-    if ($result == TRUE) {
-        if ($rows == mysqli_fetch_assoc($result)) {
-            if ($rows['email'] == $email && $rows['password'] == $password)
-                header('location:http://localhost/sportsclub/sportclubdashboard/index.php');
-            else
-                echo "Sorry, your credentials are not valid, Please try again.";
+    $result1 = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+    $count = mysqli_num_rows($result1);
+    if ($count == 1) {
+        $rows = mysqli_fetch_assoc($result1);
+        if ($rows['email'] == $email && $rows['password'] == $password2) {
+            echo ('<script>window.alert("Logged In");</script>');
+            echo "<script>window.location.href='index.php';</script>";
+            exit;
         } else {
-            echo "Email Doesnt exist ";
+            echo ('<script>window.alert("Wrong Password");</script>');
         }
-    } else {
-        echo "HelloWorld";
-    }
+    } else
+        echo ('<script>window.alert("Wrong Email");</script>');
 }
-
 ?>
 <script>
     function toggleNavbar(collapseID) {

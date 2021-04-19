@@ -25,6 +25,20 @@
 
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
           <li class="flex items-center">
+            <a href="CurrentBookings.php">
+              <button class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3" type="button" style="transition: all 0.15s ease 0s;">
+                <i class="fas fa-arrow-alt-circle-down"></i> BOOKINGS
+              </button>
+            </a>
+          </li>
+          <li class="flex items-center">
+            <a href="PlayerProfile.php">
+              <button class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3" type="button" style="transition: all 0.15s ease 0s;">
+                <i class="fas fa-arrow-alt-circle-down"></i> PROFILE
+              </button>
+            </a>
+          </li>
+          <li class="flex items-center">
             <a href="login.php">
               <button class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3" type="button" style="transition: all 0.15s ease 0s;">
                 <i class="fas fa-arrow-alt-circle-down"></i> GET STARTED
@@ -69,7 +83,7 @@
         <div class="flex flex-wrap ">
           <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-              <div class="px-4 py-5 flex-auto bg-blue-400">
+              <div class="px-4 py-5 flex-auto bg-gray-500">
                 <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                   <i class="fas fa-award"></i>
                 </div>
@@ -82,7 +96,7 @@
           </div>
           <div class="w-full md:w-4/12 px-4 text-center">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-              <div class="px-4 py-5 flex-auto bg-blue-400">
+              <div class="px-4 py-5 flex-auto bg-gray-400">
                 <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-500">
                   <i class="fas fa-retweet"></i>
                 </div>
@@ -95,7 +109,7 @@
           </div>
           <div class="pt-6 w-full md:w-4/12 px-4 text-center ">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-              <div class="px-4 py-5 flex-auto bg-blue-400">
+              <div class="px-4 py-5 flex-auto bg-gray-400">
                 <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
                   <i class="fas fa-fingerprint"></i>
                 </div>
@@ -166,19 +180,16 @@
         </div>
       </div>
 
-      <section class="pb-20 relative block bg-gray-900">
+      <section class="relative block bg-gray-900">
         <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 80px;">
 
         </div>
         <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
           <div class="flex flex-wrap text-center justify-center">
             <div class="w-full lg:w-6/12 px-4">
-              <h2 class="text-4xl font-semibold text-white">Register With Us</h2>
-              <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                Register as a player to play.
-                Register as a club to extend your reach.
-                Register as a coach to give coaching.
-              </p>
+              <a href="register.php">
+                <h2 class="text-4xl font-semibold text-white">REGISTER WITH US</h2>
+              </a>
             </div>
           </div>
           <div class="flex flex-wrap mt-12 justify-center">
@@ -213,41 +224,6 @@
               <p class="mt-2 mb-4 text-gray-500">
                 Participate in events and win amongst the best.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="relative block py-24 lg:pt-0 bg-gray-900">
-        <div class="container mx-auto px-4">
-          <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
-            <div class="w-full lg:w-6/12 px-4">
-              <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-                <form class="flex-auto p-5 lg:p-10">
-                  <h4 class="text-2xl font-semibold">Register with us</h4>
-                  <p class="leading-relaxed mt-1 mb-4 text-gray-600">
-                  </p>
-                  <div class="relative w-full mb-3 mt-8">
-                    <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="full-name">Full Name</label><input type="text" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Full Name" style="transition: all 0.15s ease 0s;" />
-                  </div>
-                  <div class="relative w-full mb-3">
-                    <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="email">Email</label><input type="email" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Email" style="transition: all 0.15s ease 0s;" />
-                  </div>
-                  <div class="relative w-full mb-3">
-                    <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="Contact">Contact</label><input type="tel" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Contact" style="transition: all 0.15s ease 0s;" />
-                  </div>
-
-                  <div class="relative w-full mb-3">
-                    <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="Register as">Register as</label><input type="text" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Register as" style="transition: all 0.15s ease 0s;" />
-                  </div>
-
-                  <div class="text-center mt-6">
-                    <button class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="submit" style="transition: all 0.15s ease 0s;">
-                      Register
-                    </button>
-                  </div>
-                </form>
-              </div>
             </div>
           </div>
         </div>

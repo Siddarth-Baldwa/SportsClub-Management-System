@@ -1,71 +1,69 @@
-<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
-    <div class="relative w-auto my-6 mx-auto max-w-3xl">
+<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center bg-black bg-opacity-50" id="modal-id">
+    <div class="relative w-full my-6 mx-auto max-w-3xl">
         <!--content-->
-        <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-
+        <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white bg-opacity-60 outline-none focus:outline-none">
             <!--body-->
-
             <div class="mt-10 sm:mt-0">
                 <div class="mt-5 md:mt-0 md:col-span-2">
                     <form name="RegForm" action="Events.php" onsubmit="return GEEKFORGEEKS()" method="POST">
                         <div class="shadow overflow-hidden sm:rounded-md">
-                            <div class="px-4 py-5 bg-indigo-200 sm:p-6">
+                            <div class="px-4 py-5 bg-white bg-opacity-0 sm:p-6">
                                 <div class="grid grid-cols-6 gap-6">
                                     <div class="col-span-6 sm:col-span-3">
                                         <label for="event_name" class="block text-sm font-medium text-gray-700">Event Name</label>
-                                        <input type="text" name="event_name" id="event_name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md">
+                                        <input type="text" name="event_name" id="event_name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2">
                                     </div>
 
                                     <div class="col-span-6 sm:col-span-3">
                                         <label for="last_name" class="block text-sm font-medium text-gray-700">Sport</label>
-                                        <input type="text" name="sport" id="sport" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md">
+                                        <input type="text" name="sport" id="sport" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2">
                                     </div>
 
                                     <div class="col-span-6 sm:col-span-3">
                                         <label for="event_name" class="block text-sm font-medium text-gray-700">Date</label>
-                                        <input type="text" name="datepicker" id="datepicker" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md">
+                                        <input type="text" name="datepicker" id="datepicker" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2">
                                     </div>
 
                                     <div class="col-span-6 sm:col-span-3">
                                         <label for="last_name" class="block text-sm font-medium text-gray-700">Court Number</label>
-                                        <input type="text" name="courtno" id="courtno" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md">
+                                        <input type="text" name="courtno" id="courtno" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2">
                                     </div>
 
                                     <div class="col-span-6 sm:col-span-3">
                                         <label for="event_name" class="block text-sm font-medium text-gray-700">Start Time</label>
-                                        <input type="text" name="start_time" id="start_time" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md">
+                                        <input type="text" name="start_time" id="start_time" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2">
                                     </div>
 
                                     <div class="col-span-6 sm:col-span-3">
                                         <label for="last_name" class="block text-sm font-medium text-gray-700">End Time</label>
-                                        <input type="text" name="end_time" id="end_time" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md">
+                                        <input type="text" name="end_time" id="end_time" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2">
                                     </div>
 
                                     <div class="col-span-6 sm:col-span-6">
                                         <label for="event_name" class="block text-sm font-medium text-gray-700">Participating Teams</label>
-                                        <input type="text" name="participating_teams" id="participating_teams" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md">
+                                        <input type="text" name="participating_teams" id="participating_teams" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2">
                                     </div>
 
 
                                     <div class="col-span-6 sm:col-span-3 ">
                                         <label for="city" class="block text-sm font-medium text-gray-700">Results</label>
-                                        <input type="text" name="results" id="results" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md">
+                                        <input type="text" name="results" id="results" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2">
                                     </div>
 
                                     <div class="col-span-6 sm:col-span-3">
                                         <label for="state" class="block text-sm font-medium text-gray-700">Max Capacity</label>
-                                        <input type="text" name="max_capacity" id="max_capacity" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md">
+                                        <input type="text" name="max_capacity" id="max_capacity" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2">
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                        <div class="px-4 py-3 rounded-lg bg-gray-50 text-right sm:px-6">
                             <button class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
                                 CLOSE
                             </button>
 
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" name="submit">
+                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" name="submit">
                                 SAVE
                             </button>
                         </div>

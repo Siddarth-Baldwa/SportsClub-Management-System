@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="./images/apple-icon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
-    <title>Login</title>
+    <title>Register</title>
 </head>
 
 <body class="text-gray-800 antialiased">
@@ -26,7 +26,7 @@
                     <li class="flex items-center">
                         <a href="login.php">
                             <button class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3" type="button" style="transition: all 0.15s ease 0s;">
-                                <i class="fas fa-arrow-alt-circle-down"></i> REGISTER
+                                <i class="fas fa-arrow-alt-circle-down"></i> Login
                             </button>
                         </a>
                     </li>
@@ -168,7 +168,7 @@ if (isset($_POST['submit'])) {
     $fees = $_POST['fees'];
     $bloodgroup = $_POST['bloodgroup'];
     $gender = $_POST['gender'];
-    $password = $_POST['password'];
+    $password1 = $_POST['password'];
 
 
     // Connecting to the Database
@@ -182,7 +182,7 @@ if (isset($_POST['submit'])) {
     if (!$conn) {
         die("Sorry we failed to connect: " . mysqli_connect_error());
     }
-    $sql = "INSERT INTO `player` (`first_name`, `last_name`, `street`, `city`, `email`, `phone`, `bloodgroup`, `password`, `gender`,`age`, `date_time`) VALUES ('$first_name', '$last_name', '$street', '$city', '$email', '$phoneno', '$bloodgroup','$password', '$gender','$age', current_timestamp())";
+    $sql = "INSERT INTO `player` (`first_name`, `last_name`, `street`, `city`, `email`, `phone`, `bloodgroup`, `password`, `gender`,`age`, `date_time`) VALUES ('$first_name', '$last_name', '$street', '$city', '$email', '$phoneno', '$bloodgroup','$password1', '$gender','$age', current_timestamp())";
 
     $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 

@@ -9,7 +9,7 @@ $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 ?>
 
 <div class="relative mt-4 w-auto my-6 mx-auto max-w-3xl">
-    <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+    <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-gray-400 bg-opacity-30 outline-none focus:outline-none">
 
         <div class="mt-10 sm:mt-0">
             <div class="mt-5 md:mt-0 md:col-span-2">
@@ -23,7 +23,7 @@ $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
                             while ($rows = mysqli_fetch_assoc($result)) {
                     ?>
                                 <div class="shadow overflow-hidden sm:rounded-md">
-                                    <div class="px-4 py-5 bg-indigo-200 sm:p-6">
+                                    <div class="px-4 py-5 bg-indigo-200 bg-opacity-0 sm:p-6">
                                         <div class="grid grid-cols-6 gap-6">
                                             <div class="col-span-6 sm:col-span-3">
                                                 <label for="first_name" class="block text-sm font-medium text-gray-700">First Name</label>
