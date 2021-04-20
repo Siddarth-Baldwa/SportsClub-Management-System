@@ -23,7 +23,7 @@ $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
 <body class="text-gray-800 antialiased">
     <div class="relative mt-32 w-auto my-6 mx-auto max-w-3xl">
-        <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-gray-400 bg-opacity-40 outline-none focus:outline-none">
+        <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white bg-opacity-0 outline-none focus:outline-none">
 
             <div class="mt-10 sm:mt-0">
                 <div class="mt-10 md:mt-0 md:col-span-2">
@@ -37,37 +37,37 @@ $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
                                 $rows = mysqli_fetch_assoc($result)
                         ?>
                                 <div class="shadow overflow-hidden sm:rounded-md">
-                                    <div class="px-4 py-5 bg-indigo-200 bg-opacity-0 sm:p-6">
+                                    <div class="px-4 py-5 bg-white bg-opacity-0 sm:p-6">
                                         <div class="grid grid-cols-6 gap-6">
                                             <div class="col-span-6 sm:col-span-3">
-                                                <label for="first_name" class="block text-sm font-medium text-white">Club Name</label>
+                                                <label for="first_name" class="block text-sm font-medium text-black">Club Name</label>
                                                 <input type="text" name="club_name" id="club_name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2" value="<?php echo $rows['name']; ?>">
                                             </div>
 
 
                                             <div class="col-span-6 sm:col-span-3">
-                                                <label for="phone_no" class="block text-sm font-medium text-white">Phone Number</label>
+                                                <label for="phone_no" class="block text-sm font-medium text-black">Phone Number</label>
                                                 <input type="text" name="phone_no" id="phone_no" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2" value="<?php echo $rows['contact_no']; ?>">
                                             </div>
 
 
                                             <div class="col-span-6 sm:col-span-3">
-                                                <label for="city" class="block text-sm font-medium text-white">Street Number</Address></label>
+                                                <label for="city" class="block text-sm font-medium text-black">Street Number</Address></label>
                                                 <input type="text" name="street_no" id="street_no" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2" value="<?php echo $rows['street_no']; ?>">
                                             </div>
 
                                             <div class="col-span-6 sm:col-span-3">
-                                                <label for="state" class="block text-sm font-medium text-white">City</label>
+                                                <label for="state" class="block text-sm font-medium text-black">City</label>
                                                 <input type="text" name="city" id="city" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2" value="<?php echo $rows['city']; ?>">
                                             </div>
 
                                             <div class="col-span-6 sm:col-span-3">
-                                                <label for="state" class="block text-sm font-medium text-white">Password</label>
+                                                <label for="state" class="block text-sm font-medium text-black">Password</label>
                                                 <input type="text" name="password" id="password" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2" value="<?php echo $rows['password']; ?>">
                                             </div>
 
                                             <div class="col-span-6 sm:col-span-6">
-                                                <label for="first_name" class="block text-sm font-medium text-white">Facilities</label>
+                                                <label for="first_name" class="block text-sm font-medium text-black">Facilities</label>
                                                 <input type="text" name="description" id="description" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-8 shadow-sm sm:text-sm border-black rounded-md px-2" value="<?php echo $rows['facilities']; ?>">
                                             </div>
                                         </div>

@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -16,7 +20,7 @@
     <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
         <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
             <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-                <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white" href="index.php">Sports Club Management</a><button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onclick="toggleNavbar('example-collapse-navbar')">
+                <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black" href="index.php">Sports Club Management</a><button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onclick="toggleNavbar('example-collapse-navbar')">
                     <i class="text-white fas fa-bars"></i>
                 </button>
             </div>
@@ -36,11 +40,11 @@
     </nav>
     <main>
         <section class="absolute w-full h-full">
-            <div class="absolute top-0 w-full h-full bg-gray-900" style="background-image: url(./images/register_bg_2.png); background-size: 100%; background-repeat: no-repeat;"></div>
+            <div class="absolute top-0 w-full h-full bg-white bg-opacity-90" style="background-image: url(images/123456.jpg); background-size: 100%; background-repeat: no-repeat;"></div>
             <div class="container mx-auto px-4 h-full">
                 <div class="flex content-center items-center justify-center h-full">
                     <div class="w-full lg:w-4/12 px-4">
-                        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
+                        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white bg-opacity-0 border-0">
                             <div class="rounded-t mb-0 px-6 py-6">
                                 <div class="text-center mb-3">
                                     <h3 class="text-gray-600 text-lg font-bold">
@@ -87,6 +91,8 @@
 </html>
 
 <?php
+
+ob_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -98,7 +104,6 @@ if (!$conn) {
     die("Sorry we failed to connect: " . mysqli_connect_error());
 }
 
-
 if (isset($_POST['submit1'])) {
     // echo ('<script>window.alert("Please enter Password");</script>');
 
@@ -108,23 +113,47 @@ if (isset($_POST['submit1'])) {
     // echo ('<script>window.alert("baba");</script>');
     // echo ('<script>window.alert("$password2");</script>');
 
+    if ($email == 10001 || $email == 10002 || $email == 10004) {
+        $sql = "SELECT * FROM sports_club where club_id='$email'";
+        $result1 = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+        $count = mysqli_num_rows($result1);
+        if ($count == 1) {
+            $rows = mysqli_fetch_assoc($result1);
+            $login_id = $rows['club_id'];
+            if ($rows['club_id'] == $email && $rows['password'] == $password2) {
+                $_SESSION['t3'] = $login_id;
+                echo ('<script>window.alert("Logged In");</script>');
+                echo "<script>window.location.href='http://localhost/sportsclub/sportclubdashboard/Events.php';</script>";
+                exit;
+            } else {
+                echo ('<script>window.alert("Wrong Password");</script>');
+            }
+        } else
+            echo ('<script>window.alert("Wrong Email");</script>');
+    }
     // $sql = "Select * from users where username='$username' AND password='$password'";
-    $sql = "SELECT * FROM player where email='$email'";
-    $result1 = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-    $count = mysqli_num_rows($result1);
-    if ($count == 1) {
-        $rows = mysqli_fetch_assoc($result1);
-        if ($rows['email'] == $email && $rows['password'] == $password2) {
-            echo ('<script>window.alert("Logged In");</script>');
-            echo "<script>window.location.href='index.php';</script>";
-            exit;
-        } else {
-            echo ('<script>window.alert("Wrong Password");</script>');
-        }
-    } else
-        echo ('<script>window.alert("Wrong Email");</script>');
+    else {
+        $sql = "SELECT * FROM player where email='$email'";
+
+        $result1 = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+        $count = mysqli_num_rows($result1);
+        if ($count == 1) {
+            $rows = mysqli_fetch_assoc($result1);
+            $login_id = $rows['reg_id'];
+            if ($rows['email'] == $email && $rows['password'] == $password2) {
+                $_SESSION['t3'] = $login_id;
+                echo ('<script>window.alert("Logged In");</script>');
+                echo "<script>window.location.href='index.php';</script>";
+                exit;
+            } else {
+                echo ('<script>window.alert("Wrong Password");</script>');
+            }
+        } else
+            echo ('<script>window.alert("Wrong Email");</script>');
+    }
 }
 ?>
+
 <script>
     function toggleNavbar(collapseID) {
         document.getElementById(collapseID).classList.toggle("hidden");

@@ -6,15 +6,14 @@ $sql = "SELECT * FROM event WHERE event_name='$eventname'";
 $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
 ?>
-<div class="relative mt-16 w-auto my-6 mx-auto max-w-3xl">
+<div class="relative w-auto mx-auto max-w-3xl">
     <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
 
         <div class="mt-10 sm:mt-0">
-            <div class="mt-5 md:mt-0 md:col-span-2">
+            <div class="md:mt-0 md:col-span-2">
                 <div class="border-t border-gray-200">
                     <?php if ($result == TRUE) {
                         $num = mysqli_num_rows($result);
-
                         if ($num > 0) {
                             // LOOP TILL END OF DATA 
                             while ($rows = mysqli_fetch_assoc($result)) {

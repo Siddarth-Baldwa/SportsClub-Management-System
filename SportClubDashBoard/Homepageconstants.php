@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="absolute top-0 w-screen h-full bg-gray-900" style="background-image: url(../images/1116882.jpg); background-size: 100%; background-repeat: no-repeat; overflow-x: hidden;">
+<body class="absolute top-0 w-screen h-full bg-gray-900" style="background-image: url(../images/123456.jpg); background-size: 100%; background-repeat: no-repeat; overflow-x: hidden;">
     <div>
         <nav class="bg-gray-800 bg-opacity-0">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,11 +31,11 @@
                             <div class="ml-10 flex items-baseline space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
-                                <a href="Events.php" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">EVENTS</a>
+                                <a href="Events.php" class="text-black hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">EVENTS</a>
 
-                                <a href="Coaches.php" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">COACHES</a>
+                                <a href="Coaches.php" class="text-black hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">COACHES</a>
 
-                                <a href="Bookings.php" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">BOOKINGS</a>
+                                <a href="Bookings.php" class="text-black hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">BOOKINGS</a>
 
                             </div>
                         </div>
@@ -51,10 +51,10 @@
                                 <img class="h-7 w-7 rounded-full" src="../images/user (1).png" alt="">
                             </button>
                         </div>
-                        <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 hidden focus:outline-none z-10" role="menu" aria-orientation="vertical" aria-labelledby="user-menu" id="dropdown">
-                            <a href="Profile.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
+                        <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-blue-300 ring-1 ring-black ring-opacity-5 hidden focus:outline-none z-10" role="menu" aria-orientation="vertical" aria-labelledby="user-menu" id="dropdown">
+                            <a href="Profile.php" class="block px-4 py-2 text-sm text-white hover:bg-blue-400" role="menuitem">Your Profile</a>
 
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                            <a href="../logout.php" class="block px-4 py-2 text-sm text-white hover:bg-blue-400" role="menuitem">Sign out</a>
                         </div>
                     </div>
                 </div>

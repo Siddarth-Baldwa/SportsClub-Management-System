@@ -1,7 +1,7 @@
-<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center bg-black bg-opacity-50" id="modal-id">
+<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center bg-black bg-opacity-30" id="modal-id">
     <div class="relative w-full my-6 mx-auto max-w-3xl">
         <!--content-->
-        <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white bg-opacity-60 outline-none focus:outline-none">
+        <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white bg-opacity-90 outline-none focus:outline-none">
             <!--body-->
             <div class="mt-10 sm:mt-0">
                 <div class="mt-5 md:mt-0 md:col-span-2">

@@ -16,7 +16,7 @@
     <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
         <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
             <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-                <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white" href="index.php">Sports Club Management</a><button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onclick="toggleNavbar('example-collapse-navbar')">
+                <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black" href="index.php">Sports Club Management</a><button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onclick="toggleNavbar('example-collapse-navbar')">
                     <i class="text-white fas fa-bars"></i>
                 </button>
             </div>
@@ -36,11 +36,11 @@
     </nav>
     <main>
         <section class="absolute w-full h-full">
-            <div class="absolute top-0 w-full h-full bg-gray-900" style="background-image: url(./images/register_bg_2.png); background-size: 100%; background-repeat: no-repeat;"></div>
+            <div class="absolute top-0 w-full h-full bg-white bg-opacity-90" style="background-image: url(images/123456.jpg); background-size: 100%; background-repeat: no-repeat;"></div>
             <div class="container mx-auto px-4 h-full">
                 <div class="flex content-center items-center justify-center h-full">
                     <div class="w-full lg:w-6/12 px-4 mt-5">
-                        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
+                        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white opacity-0 border-0">
                             <div class="rounded-t mb-0 px-6 py-6">
                                 <div class="text-center mb-3">
                                     <h3 class="text-gray-600 text-lg font-bold">
@@ -51,7 +51,7 @@
                             </div>
                             <!-- component -->
 
-                            <div class="bg-gray-300 shadow-md rounded px-8 pt-2 flex flex-col ">
+                            <div class="bg-white shadow-md rounded px-8 pt-2 flex flex-col ">
                                 <form name="RegForm" onaction="login.php" onsubmit="return COACHFORM()" method="POST">
                                     <div class="-mx-3 md:flex mb-2 ">
                                         <div class="md:w-1/2 px-3 mb-6 md:mb-0">
