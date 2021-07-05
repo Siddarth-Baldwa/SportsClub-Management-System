@@ -145,12 +145,12 @@ session_start();
                   <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-700">
                     <i class="fas fa-retweet"></i>
                   </div>
-
-                  <h6 class="text-xl font-semibold">Train</h6>
-                  <p class="mt-2 mb-4 text-gray-600">
-                    Train under the best coaches available at your club.
-                  </p>
-
+                  <a href="public/sport2.php">
+                    <h6 class="text-xl font-semibold">Train</h6>
+                    <p class="mt-2 mb-4 text-gray-600">
+                      Train under the best coaches available at your club.
+                    </p>
+                  </a>
                 </div>
               </div>
             </div>
