@@ -62,5 +62,5 @@ to enter solo.
 12. Ability to add/update/delete bookings of users by club
 
 
-#ER Diagram and Relational Schema
+# ER Diagram and Relational Schema
 https://drive.google.com/file/d/1Xyo9bN2c6UTPArucaudkPtKXMGZQzMT9/view?usp=sharing, https://drive.google.com/file/d/1efp6UCLfZ78moAelHJ8odiUAt2BBJlaO/view?usp=sharing
