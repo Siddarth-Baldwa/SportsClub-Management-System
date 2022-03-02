@@ -60,3 +60,7 @@ to enter solo.
 10. Ability to participate in events/competitions
 11. Ability to select a city to choose the sports clubs available in the given city
 12. Ability to add/update/delete bookings of users by club
+
+
+#ER Diagram and Relational Schema
+https://drive.google.com/file/d/1Xyo9bN2c6UTPArucaudkPtKXMGZQzMT9/view?usp=sharing, https://drive.google.com/file/d/1efp6UCLfZ78moAelHJ8odiUAt2BBJlaO/view?usp=sharing
